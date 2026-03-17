@@ -1,0 +1,31 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Docker files (no need to copy into image)
+Dockerfile
+.dockerignore
+
+# Dev/build artifacts
+node_modules
+npm-debug.log
+*.log
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode
+.idea
+*.swp
+*.swo
+
+# CI/CD
+.github
+.gitlab-ci.yml
+
+# Docs (optional — remove if you want README inside container)
+README.md
+CHANGELOG.md

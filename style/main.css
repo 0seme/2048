@@ -756,3 +756,72 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+
+    .koko-badge {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 9999;
+      display: -webkit-inline-flex;
+      display: inline-flex;
+      -webkit-align-items: center;
+      align-items: center;
+      gap: 7px;
+      background: #8f7a66;
+      border-radius: 20px;
+      padding: 7px 14px 7px 9px;
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      -webkit-transition: background 150ms ease, box-shadow 150ms ease, -webkit-transform 150ms ease;
+      transition: background 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+      cursor: pointer; }
+    
+    .koko-badge:hover {
+      background: #776e65;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+      -webkit-transform: translateY(-1px);
+      transform: translateY(-1px); }
+    
+    .koko-badge:active {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
+    
+    .koko-badge__icon {
+      width: 24px;
+      height: 24px;
+      background: #edc22e;
+      border-radius: 50%;
+      display: -webkit-inline-flex;
+      display: inline-flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1;
+      flex-shrink: 0; }
+    
+    .koko-badge__label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #f9f6f2;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+      font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif; }
+    
+    /* Tuck badge below status bar on small screens */
+    @media screen and (max-width: 520px) {
+      .koko-badge {
+        top: 10px;
+        right: 10px;
+        padding: 5px 10px 5px 7px; }
+    
+      .koko-badge__icon {
+        width: 20px;
+        height: 20px;
+        font-size: 11px; }
+    
+      .koko-badge__label {
+        font-size: 11px; } }
+    
