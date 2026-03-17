@@ -757,71 +757,76 @@ hr {
   .game-message .lower {
     margin-top: 30px !important; } }
 
-    .koko-badge {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      z-index: 9999;
-      display: -webkit-inline-flex;
-      display: inline-flex;
-      -webkit-align-items: center;
-      align-items: center;
-      gap: 7px;
-      background: #8f7a66;
-      border-radius: 20px;
-      padding: 7px 14px 7px 9px;
-      text-decoration: none;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      -webkit-transition: background 150ms ease, box-shadow 150ms ease, -webkit-transform 150ms ease;
-      transition: background 150ms ease, box-shadow 150ms ease, transform 150ms ease;
-      cursor: pointer; }
-    
-    .koko-badge:hover {
-      background: #776e65;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
-      -webkit-transform: translateY(-1px);
-      transform: translateY(-1px); }
-    
-    .koko-badge:active {
-      -webkit-transform: translateY(0px);
-      transform: translateY(0px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
-    
-    .koko-badge__icon {
-      width: 24px;
-      height: 24px;
-      background: #edc22e;
-      border-radius: 50%;
-      display: -webkit-inline-flex;
-      display: inline-flex;
-      -webkit-align-items: center;
-      align-items: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      font-size: 13px;
-      line-height: 1;
-      flex-shrink: 0; }
-    
-    .koko-badge__label {
-      font-size: 13px;
-      font-weight: bold;
-      color: #f9f6f2;
-      letter-spacing: 0.2px;
-      white-space: nowrap;
-      font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif; }
-    
-    /* Tuck badge below status bar on small screens */
-    @media screen and (max-width: 520px) {
-      .koko-badge {
-        top: 10px;
-        right: 10px;
-        padding: 5px 10px 5px 7px; }
-    
-      .koko-badge__icon {
-        width: 20px;
-        height: 20px;
-        font-size: 11px; }
-    
-      .koko-badge__label {
-        font-size: 11px; } }
-    
+  /* ================================================
+   @CloudByKoko — fixed brand badge (top-right)
+   ================================================ */
+
+.koko-badge {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 9999;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 8px;
+  background: #8f7a66;
+  border-radius: 30px;
+  padding: 8px 16px 8px 8px;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22), 0 1px 3px rgba(0, 0, 0, 0.12);
+  -webkit-transition: all 180ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 180ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.15); }
+
+.koko-badge:hover {
+  background: #776e65;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28), 0 2px 6px rgba(0, 0, 0, 0.14);
+  -webkit-transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px) scale(1.03); }
+
+.koko-badge:active {
+  -webkit-transform: translateY(0) scale(0.97);
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
+
+.koko-badge__icon {
+  width: 28px;
+  height: 28px;
+  background: #edc22e;
+  border-radius: 50%;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+
+.koko-badge__label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #f9f6f2;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif; }
+
+@media screen and (max-width: 520px) {
+  .koko-badge {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px 6px 6px;
+    gap: 6px; }
+
+  .koko-badge__icon {
+    width: 22px;
+    height: 22px;
+    font-size: 12px; }
+
+  .koko-badge__label {
+    font-size: 11px; } }
