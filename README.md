@@ -1,4 +1,4 @@
-# 🎮 2048 Game — CI/CD Pipeline on AWS
+#  2048 Game — CI/CD Pipeline on AWS
 
 > Automated containerized deployment using AWS CodePipeline, CodeBuild, Amazon ECS (Fargate), and Amazon ECR.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates a **production-grade CI/CD pipeline** for a containerized static web application. Any code change pushed to GitHub automatically triggers a full build and deployment cycle — no manual steps required.
 
@@ -20,7 +20,7 @@ The application is a containerized and personalized static web app, deployed to 
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 Developer pushes code to GitHub
@@ -49,7 +49,7 @@ Developer pushes code to GitHub
 ![CI/CD Pipeline - All Stages Succeeded](./docs/PIPELINECOMPLETE.png)
 ---
 
-## 🛠️ AWS Services Used
+##  AWS Services Used
 
 | Service | Purpose |
 |---|---|
@@ -63,7 +63,7 @@ Developer pushes code to GitHub
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 2048/
@@ -79,7 +79,7 @@ Developer pushes code to GitHub
 
 ---
 
-## ⚙️ CI/CD Pipeline Flow
+##  CI/CD Pipeline Flow
 
 ### 1. Source Stage
 - CodePipeline monitors the `master` branch via GitHub App connection
@@ -103,7 +103,7 @@ CodeBuild executes `buildspec.yml` which:
 
 ---
 
-## 🐳 Docker Configuration
+##  Docker Configuration
 
 The container uses `nginx:alpine` as the base image with a custom nginx configuration that includes:
 
@@ -115,7 +115,7 @@ The container uses `nginx:alpine` as the base image with a custom nginx configur
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 **Prerequisites:** Docker installed
 
@@ -139,7 +139,7 @@ docker stop 2048-local && docker rm 2048-local
 
 ---
 
-## 🔑 Key Concepts Demonstrated
+##  Key Concepts Demonstrated
 
 - **Infrastructure as Code mindset** — all configuration stored in the repo (`Dockerfile`, `buildspec.yml`, `taskdef.json`, `nginx.conf`)
 - **Immutable deployments** — every build produces a versioned image tag, never just overwriting `latest`
@@ -149,7 +149,7 @@ docker stop 2048-local && docker rm 2048-local
 
 ---
 
-## 📸 Project Screenshots
+##  Project Screenshots
 
 > Screenshots documenting the full pipeline from local build to live will be available on my portfolio website when available.
 
@@ -164,7 +164,7 @@ Key evidence captured:
 
 ---
 
-## 🧹 Teardown
+##  Teardown
 
 All AWS resources have been deprovisioned after documentation to avoid ongoing costs. Resources deleted: CodePipeline, CodeBuild project, ECS service and cluster, ECR repository, Application Load Balancer, target group, security groups, CloudWatch log groups, S3 artifact bucket, and IAM roles.
 
@@ -172,7 +172,7 @@ All AWS resources have been deprovisioned after documentation to avoid ongoing c
 
 ![Live Application on AWS](./docs/FINALSCREEENSHOT111.png)
 
-## 👤 Author
+##  Author
 
 **Joyce (Koko)**
 ☁️ [@CloudByKoko](https://github.com/0seme)
@@ -181,7 +181,7 @@ All AWS resources have been deprovisioned after documentation to avoid ongoing c
 
 ---
 
-## 📄 License
+##  License
 
 Original 2048 game by [Gabriele Cirulli](https://github.com/gabrielecirulli/2048) — MIT License.
 CI/CD configuration and infrastructure code by Joyce — feel free to reference for your own projects.
